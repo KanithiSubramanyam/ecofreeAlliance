@@ -1,5 +1,16 @@
-$primaryColor : #e92a2a;
+// $primaryColor : #4CAF50;
+// $secondaryColor:#E3F2FD;
 
-h1{
-    color: $primaryColor;
+// #myNav5{
+//     background-color: $primaryColor;
+// }
+// .nav-link{
+//     background-color: $secondaryColor
+// }
+.jumbotron .container .row {
+    align-items: center;
+}
+.jumbotron img.float-right {
+    max-width: 100%;
+    height: auto;
 }

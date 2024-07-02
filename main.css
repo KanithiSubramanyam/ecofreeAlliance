@@ -1,3 +1,8 @@
-h1 {
-  color: #e92a2a;
+.jumbotron .container .row {
+  align-items: center;
+}
+
+.jumbotron img.float-right {
+  max-width: 100%;
+  height: auto;
 }/*# sourceMappingURL=main.css.map */
