@@ -22,6 +22,7 @@
     ></script>
   </head>
   <body>
+    <div id="navbar"></div>
     <div class="container-fluid">
         <div class="position-relative mx-0 px-0">
             <img class="poster object-fit-cover w-100 h-25" height="200px" src="assets/deforastation.png" alt="Deforestation">
@@ -73,5 +74,12 @@
         </div>
       </div>
     </div>
+    <script>
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+        });
+    </script>
   </body>
 </html>
