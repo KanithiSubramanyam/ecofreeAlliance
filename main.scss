@@ -14,3 +14,8 @@
     max-width: 100%;
     height: auto;
 }
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: rgb(255, 255, 255); /* Change this to your desired color */
+    content: " / "; /* You can also change the separator if you like */
+  }
