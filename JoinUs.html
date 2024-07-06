@@ -24,7 +24,101 @@
   <body>
     <div>
       <div id="navbar"></div>
+      <div class="position-relative">
+        <img
+          class="poster w-100"
+          height="250px"
+          style="opacity: 80%"
+          src="assets/greenImage.jpg"
+          alt="Deforestation"
+        />
+        <div
+          class="breadcrumb-container position-absolute top-50 start-0 translate-middle-y"
+        >
+          <p class="fs-1 fw-bold mx-5 px-5 text-dark ">Join Us</p>
+          <nav
+            style="--bs-breadcrumb-divider: '>'"
+            class="text-white"
+            aria-label="breadcrumb"
+          >
+            <ol class="breadcrumb text-white mx-5 px-5 fs-3 fw-bold p-2">
+              <li class="breadcrumb-item text-white">
+                <a
+                  href="home.html"
+                  class="link-primary text-white link-underline link-underline-opacity-0 "
+                  >Home</a
+                >
+              </li>
+              <li class="breadcrumb-item text-white active text-primary" aria-current="page">
+                Join Us
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
     </div>
+    <div class="container my-5">
+      <div class="row">
+          <!-- Form Card -->
+          <div class="col-lg-8 mb-4">
+              <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title">Contact Us</h5>
+                      <form>
+                          <div class="mb-3">
+                              <label for="nameInput" class="form-label">Name</label>
+                              <input type="text" class="form-control" id="nameInput" placeholder="Enter your name">
+                          </div>
+                          <div class="mb-3">
+                              <label for="emailInput" class="form-label">Email</label>
+                              <input type="email" class="form-control" id="emailInput" placeholder="Enter your email">
+                          </div>
+                          <div class="mb-3">
+                              <label for="phoneInput" class="form-label">Phone</label>
+                              <input type="tel" class="form-control" id="phoneInput" placeholder="Enter your phone number">
+                          </div>
+                          <div class="mb-3">
+                              <label for="subjectInput" class="form-label">Subject</label>
+                              <input type="text" class="form-control" id="subjectInput" placeholder="Enter subject">
+                          </div>
+                          <div class="mb-3">
+                              <label for="messageTextarea" class="form-label">Message</label>
+                              <textarea class="form-control" id="messageTextarea" rows="3" placeholder="Enter your message"></textarea>
+                          </div>
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Contact Information Card -->
+          <div class="col-lg-4 mb-4">
+              <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title">Our Address</h5>
+                      <p class="card-text">123 Eco Street, Green City, EcoLand</p>
+                      
+                      <h5 class="card-title mt-4">Email Address</h5>
+                      <p class="card-text">info@ecofreealliance.com</p>
+                      <p class="card-text">support@gmail.com</p>
+
+                      <h5 class="card-title mt-4">24/7 Support</h5>
+                      <p class="card-text"> 909-463-0378</p>
+                      <p class="card-text">407-438-6389</p>
+                      
+                      <h5 class="card-title mt-4">Follow Us</h5>
+                      <div class="d-flex">
+                          <a href="#" class="me-3"><i class="fab fa-whatsapp-square fa-2x"></i></a>
+                          <a href="#" class="me-3"><i class="fab fa-twitter-square fa-2x"></i></a>
+                          <a href="#" class="me-3"><i class="fab fa-instagram-square fa-2x"></i></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div id="footer"></div>
+  
   </body>
   <script>
     fetch("navbar.html")
@@ -33,4 +127,11 @@
         document.getElementById("navbar").innerHTML = data;
       });
   </script>
+    <script>
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
 </html>

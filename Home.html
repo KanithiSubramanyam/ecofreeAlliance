@@ -22,29 +22,80 @@
       crossorigin="anonymous"
     ></script>
   </head>
+  <style>
+    
+    /* .container-fluid {
+        /* padding: 3rem 0; Adjust padding as needed 
+    } */
+    .jumbotron {
+        padding: 3rem 1.5rem; /* Adjust top and bottom padding */
+    }
+    .content {
+        display: flex;
+        align-items: top;
+    }
+    .content .text {
+        flex: 1;
+        padding-right: 2rem; /* Space between text and image */
+    }
+    .content .image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end; /* Align image to the bottom */
+        padding-top: 0rem; /* Add padding to the top of the image */
+        padding-top: 0rem;
+    }
+    .image img {
+        max-width: 100%; /* Ensure image doesn't exceed its container */
+        height: auto;
+        max-height: 100%; /* Ensure image respects its aspect ratio */
+        object-fit: cover;
+        border-radius: 5px; /* Optional: Adds rounded corners */
+    }
+    @media (max-width: 768px) {
+        .content {
+            flex-direction: column;
+        }
+        .content .text {
+            padding-right: 0;
+            margin-bottom: 2rem;
+        }
+        .content .image {
+            padding-top: 0; /* Remove padding on smaller screens */
+        }
+    }
+</style>
+
 
 <body>
     <div id="navbar"></div>
     <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-          <div class="row">
-              <div class="col-md-8">
-                  <h1 class="display-4">Welcome to ecofreeAlliance</h1>
-                  <p class="lead">Join us in making a difference and creating a sustainable future for all.</p>
-                  <p>We are committed to promoting eco-friendly practices and making a positive impact on the environment. Our initiatives are designed to educate, inspire, and drive change. Get involved today and be part of the solution.</p>
-              </div>
-              <div class="col-md-4">
-                  <img src="https://zenlounge.in/wp-content/uploads/2020/10/hand-holding-tree-blur-green-nature-1-1536x1020.jpg" class="img-fluid " alt="Eco-friendly Image">
-              </div>
-          </div>
-      </div>
-  </div>ecofreeAlliance
-  Home
-  About us
-  Impacts
-  Join Us
+        <div class="container-fluid">
+            <div class="row content">
+                <div class="col-md-6 text">
+                    <h1 class="dark-bold pl-5 " >Welcome To EcoFreeAlliance</h1>
+                    <p class="lead  ps-4 " style="color:green;">Join us in making a difference and creating a sustainable future for all.</p>
+                    <p>We are committed to promoting eco-friendly practices and making a positive impact on the environment. Our initiatives are designed to educate, inspire, and drive change. Get involved today and be part of the solution.Welcome to Eco Free Alliance, where we are dedicated to creating a sustainable future for all. At Eco Free Alliance, our mission is clear: to foster eco-friendly practices and promote environmental sustainability through education, advocacy, and community involvement.
+
+                        Founded on the principles of sustainability and innovation, we strive to make a positive impact on our planet. Our initiatives are designed not only to protect our environment today but also to ensure a thriving ecosystem for future generations.
+                        
+                        Imagine a world where every action, no matter how small, contributes to preserving our planet's natural beauty and resources. From reducing our carbon footprint to advocating for wildlife conservation and promoting renewable energy sources, every project at Eco Free Alliance is a step towards a greener, healthier planet.
+                        
+                        Join us in our efforts to stop deforestation, recycle daily waste, and reduce greenhouse gas emissions. Together, we can make a significant difference in preserving biodiversity and mitigating the effects of climate change.
+                        
+                        At Eco Free Alliance, we believe that change begins with education and community engagement. Through workshops, events, and hands-on projects, we empower individuals and communities to adopt sustainable practices and become stewards of our environment.</p>
+                </div>
+                <div class="col-md-6 image">
+                    <img src="https://zenlounge.in/wp-content/uploads/2020/10/hand-holding-tree-blur-green-nature-1-1536x1020.jpg" class="img-fluid" alt="Eco-friendly Image">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
   
-  <h1 class="display-3 text-center">Together We Can Restore</h1>
+  <h1 class=" text-center dark-bold pb-3">Together We Can Restore</h1>
   <div class="container mb-5">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -130,6 +181,7 @@
 <div class="jumbotron jumbotron-fluid ">
   
   <div class="container">
+    <h4 class=" text-center dark-bold pb-3">A little introduction</h4>
     <div class="row">
         <div class="col-md-6">
             <div class="card image-overlay mb-3">
@@ -143,12 +195,11 @@
             </div>
         </div>
         <div class="col-md-6">
-          <h6 class="display-6 text-center">A little introduction</h6>
+          <!-- <h6 class="display-6 ">A little introduction</h6> -->
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Protecting environment</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo
-                        consequatur commodi doloremque inventore, reiciendis.</p>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. quia harum? Magnam incidunt, consequunturLorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, quia harum? Magnam incidunt, consequuntur recusandae non voluptates impedit dolores provident dicta aliquam veniam in placeat culpa eligendi porro quam praesentium ipsa ipsum quod necessitatibus sit aliquid. Ullam veritatis necessitatibus fugiat, tempora amet recusandae, impedit quaerat iure consequatur voluptatem enim eaque.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, quia harum? Magnam incidunt, consequuntur recusandae non voluptates impedit dolores provident dicta aliquam veniam in placeat culpa eligendi porro quam praesentium ipsa ipsum quod necessitatibus sit aliquid. Ullam veritatis necessitatibus fugiat, tempora amet recusandae, impedit quaerat iure consequatur voluptatem enim eaque.</p>
                 </div>
             </div>
         </div>
@@ -158,12 +209,10 @@
 
 
 
-    
-<div class="card">
-    <div class="card-body">
-      This is some text within a card body.
-    </div>
-  </div>
+  <div id="footer"></div>  
+
+   
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -178,6 +227,14 @@
               .then(response => response.text())
               .then(data => {
                 document.getElementById('navbar').innerHTML = data;
+              });
+          </script>
+          </script>
+          <script>
+            fetch("footer.html")
+              .then((response) => response.text())
+              .then((data) => {
+                document.getElementById("footer").innerHTML = data;
               });
           </script>
 </body>
