@@ -30,7 +30,7 @@
     />
   </head>
 
-  <body>
+  <body onscroll="myFunction()">
     <div class="m-0 p-0">
       <div id="navbar"></div>
 
@@ -69,22 +69,26 @@
         </div>
       </div>
 
-      <div class="introduction container-fluid">
-        <div class="d-flex align-items-center m-5 p-5">
-          <div class="introImage flex-shrink-0 w-50 h-50">
+      <div class="container my-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
             <img
               src="assets/savetrees.jpg"
-              class="w-100 h-75 rounded-4"
-              alt="palntHands"
+              class="w-100 h-auto rounded-4"
+              alt="plantHands"
             />
           </div>
-          <div class="introductionData flex-grow-1 ms-5">
+          <div class="col-lg-6">
             <div>
-              <p class="fw-bolder fs-5 text-success">A little Introduction</p>
+              <p class="fw-bolder fs-5 text-success text-center">
+                A little Introduction
+              </p>
             </div>
-            <div class="justify-content-center">
-              <p class="fw-bold fs-2">Protect Trees from Deforestation</p>
-              <p style="text-align: justify" class="me-5">
+            <div>
+              <p class="fw-bold fs-2 text-center">
+                Protect Trees from Deforestation
+              </p>
+              <p style="text-align: justify">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Officiis in tempora accusamus reiciendis quam veniam repellat
                 dicta autem eum, ab maxime fugit sunt vel consequuntur delectus.
@@ -106,8 +110,7 @@
                     class="fa-regular fa-circle-check"
                     style="color: #409d60"
                   ></i>
-                  Dolorum error necessitatibus suscipit dignissimos ea
-                  consectetur
+                  Dolorum error necessitatibus suscipit dignissimos
                 </li>
                 <li class="my-2">
                   <i
@@ -128,7 +131,8 @@
           </div>
         </div>
       </div>
-      <div class="bg-grey py-2">
+
+      <div class="bg-custom py-2">
         <div class="ourVolunteers text-center my-5">
           <p class="fw-bolder fs-5 text-success">Our Volunteers</p>
           <p class="fw-bold fs-2">Our Expert Voulunteers</p>
@@ -182,7 +186,7 @@
             </div>
             <div class="card-body">
               <div class="donation text-white fs-5 fw-bolder">
-                <ul class="d-flex justify-content-center">
+                <ul class="d-lg-flex justify-content-center px-md-2">
                   <li>$20</li>
                   <li>$50</li>
                   <li>$100</li>
@@ -192,13 +196,13 @@
                 </ul>
               </div>
             </div>
-            <button class="btn btn-warning p-3 m-auto rounded-3">
+            <button class="btn btn-warning p-3 align-center m-auto rounded-3">
               Donate Now
             </button>
           </div>
         </div>
       </div>
-      <div class="bg-grey">
+      <div class="bg-custom">
         <div class="m-5 p-5">
           <div class="my-2 py-2 text-center">
             <p class="fw-bolder fs-5 text-success">
@@ -211,7 +215,7 @@
               <img
                 src="assets/responsibility.jpg"
                 alt="responsabilites"
-                class="w-100 rounded-4"
+                class="w-100 h-auto rounded-4"
               />
             </div>
 
@@ -222,13 +226,13 @@
                     class="rounded-start-5 rounded-top-5 bg-white text-center py-5 mb-4 ms-5"
                   >
                     <p class="fs-2 fw-bold text-success">8709</p>
-                    <p class="fs-6 fw-bolder text-muted">Donations</p>
+                    <p class="fs-6 fw-semibold text-muted">Donations</p>
                   </div>
                   <div
                     class="rounded-bottom-5 rounded-start-5 bg-white text-center py-5 ms-5"
                   >
                     <p class="fs-2 fw-bold text-warning">90234</p>
-                    <p class="fs-6 fw-bolder text-muted">Fund Raised</p>
+                    <p class="fs-6 fw-semibold text-muted">Fund Raised</p>
                   </div>
                 </div>
 
@@ -237,13 +241,13 @@
                     class="rounded-end-5 rounded-top-5 bg-white text-center py-5 mt-5 mb-4 me-5"
                   >
                     <p class="fs-2 fw-bold text-warning">234</p>
-                    <p class="fs-6 fw-bolder text-muted">Campaigns</p>
+                    <p class="fs-6 fw-semibold text-muted">Campaigns</p>
                   </div>
                   <div
                     class="rounded-bottom-5 rounded-end-5 bg-white text-center py-5 me-5"
                   >
                     <p class="fs-2 fw-bold text-success">230</p>
-                    <p class="fs-6 fw-bolder text-muted">Volunteers</p>
+                    <p class="fs-6 fw-semibold text-muted">Volunteers</p>
                   </div>
                 </div>
               </div>
@@ -272,6 +276,45 @@
             el.classList.remove("active");
           });
           item.classList.add("active");
+        });
+      });
+      function myFunction() {
+        console.log("hi");
+        if (window.scrollY >= 100) {
+          document.getElementById("navbar").classList.add("fixed-top");
+        } else {
+          document.getElementById("navbar").classList.remove("fixed-top");
+        }
+      }
+    </script>
+    <script>
+      $(document).ready(function () {
+        // Initialize the carousel
+        $("#teamCarousel").carousel();
+
+        // Hide extra cards on large screens
+        $("#teamCarousel").on("slid.bs.carousel", function () {
+          var visibleItems = $(this).find(".carousel-item.active .card").length;
+          var totalItems = $(this)
+            .find(".carousel-item.active")
+            .find(".card").length;
+
+          // Hide cards beyond the visible limit (4 cards for large screens)
+          if (visibleItems < totalItems) {
+            $(this)
+              .find(".carousel-item.active")
+              .find(".card")
+              .slice(4)
+              .addClass("d-none d-lg-block");
+          }
+        });
+
+        // Show hidden cards when navigating next
+        $(".carousel-control-next").click(function () {
+          $("#teamCarousel")
+            .find(".carousel-item.active")
+            .find(".d-none")
+            .removeClass("d-none d-lg-block");
         });
       });
     </script>

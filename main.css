@@ -1,3 +1,14 @@
+.navbar-nav {
+  justify-content: flex-end !important;
+}
+.navbar-nav .nav-item {
+  margin: 0px 20px;
+}
+
+.bg-custom {
+  background-color: #e3eadf !important;
+}
+
 .jumbotron .container .row {
   align-items: center;
 }
@@ -16,7 +27,17 @@
   background-image: url("../assets/bg6.jpg");
 }
 .donationDiv.mx {
-  margin: 6rem 7rem !important;
+  margin: 6rem !important;
+}
+@media ((max-width: 992px) and (min-width: 576px)) {
+  .donationDiv.mx {
+    margin: 4rem !important;
+  }
+}
+@media ((max-width: 576px)) {
+  .donationDiv.mx {
+    margin: 0rem !important;
+  }
 }
 .donationDiv.py-5 {
   padding: 6rem 3rem !important;
@@ -29,6 +50,28 @@
   margin: 10px;
   border-radius: 5px;
   padding: 10px 30px;
+  text-align: center;
+  justify-content: center;
+}
+@media ((max-width: 992px) and (min-width: 768px)) {
+  .donation ul li {
+    margin: 10px 120px;
+    padding: 10px 20px;
+  }
+}
+@media ((max-width: 768px) and (min-width: 576px)) {
+  .donation ul li {
+    font-size: medium;
+    margin: 10px 40px;
+    padding: 10px 20px;
+  }
+}
+@media ((max-width: 576px)) {
+  .donation ul li {
+    font-size: medium;
+    margin: 10px 10px;
+    padding: 10px 20px;
+  }
 }
 .donation ul :hover {
   cursor: pointer;
@@ -36,8 +79,4 @@
 }
 .donation ul .active {
   border: 2px solid black;
-}
-
-.bg-grey {
-  background-color: #e3eadf !important;
 }/*# sourceMappingURL=main.css.map */
