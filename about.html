@@ -51,7 +51,9 @@
             class="text-white"
             aria-label="breadcrumb"
           >
-            <ol class="breadcrumb text-white mx-5 px-5 fs-3 fw-bold p-2">
+            <ol
+              class="breadcrumb breadcrumb-white bg-transparent mx-5 px-5 fs-3 fw-bold p-2"
+            >
               <li class="breadcrumb-item text-white">
                 <a
                   href="home.html"
@@ -126,9 +128,8 @@
           </div>
         </div>
       </div>
-      <div class="bg-body-secondary py-2">
-
-        <div class="ourVolunteers text-center my-5 ">
+      <div class="bg-grey py-2">
+        <div class="ourVolunteers text-center my-5">
           <p class="fw-bolder fs-5 text-success">Our Volunteers</p>
           <p class="fw-bold fs-2">Our Expert Voulunteers</p>
           <div class="d-flex grid gap-4 ps-2 mt-5 justify-content-center">
@@ -172,11 +173,84 @@
         </div>
       </div>
 
+      <div class="bg-white">
+        <div>
+          <div class="donationDiv card py-5 mx rounded-3">
+            <div class="text-center card-title text-white">
+              <p class="fs-5 fw-bolder">You Can Donate</p>
+              <p class="fs-2 fw-bold">Your Donation Matters</p>
+            </div>
+            <div class="card-body">
+              <div class="donation text-white fs-5 fw-bolder">
+                <ul class="d-flex justify-content-center">
+                  <li>$20</li>
+                  <li>$50</li>
+                  <li>$100</li>
+                  <li>$500</li>
+                  <li>$1000</li>
+                  <li>others</li>
+                </ul>
+              </div>
+            </div>
+            <button class="btn btn-warning p-3 m-auto rounded-3">
+              Donate Now
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-grey">
+        <div class="m-5 p-5">
+          <div class="my-2 py-2 text-center">
+            <p class="fw-bolder fs-5 text-success">
+              Achievements and Milestones
+            </p>
+            <p class="fs-2 fw-bold">Corporate Social Responsibility</p>
+          </div>
+          <div class="row my-5">
+            <div class="col-lg-6">
+              <img
+                src="assets/responsibility.jpg"
+                alt="responsabilites"
+                class="w-100 rounded-4"
+              />
+            </div>
 
+            <div class="col-lg-6 mt-3">
+              <div class="row justify-content-center">
+                <div class="col-md-6 my-4">
+                  <div
+                    class="rounded-start-5 rounded-top-5 bg-white text-center py-5 mb-4 ms-5"
+                  >
+                    <p class="fs-2 fw-bold text-success">8709</p>
+                    <p class="fs-6 fw-bolder text-muted">Donations</p>
+                  </div>
+                  <div
+                    class="rounded-bottom-5 rounded-start-5 bg-white text-center py-5 ms-5"
+                  >
+                    <p class="fs-2 fw-bold text-warning">90234</p>
+                    <p class="fs-6 fw-bolder text-muted">Fund Raised</p>
+                  </div>
+                </div>
 
-
-
-
+                <div class="col-md-6 my-4">
+                  <div
+                    class="rounded-end-5 rounded-top-5 bg-white text-center py-5 mt-5 mb-4 me-5"
+                  >
+                    <p class="fs-2 fw-bold text-warning">234</p>
+                    <p class="fs-6 fw-bolder text-muted">Campaigns</p>
+                  </div>
+                  <div
+                    class="rounded-bottom-5 rounded-end-5 bg-white text-center py-5 me-5"
+                  >
+                    <p class="fs-2 fw-bold text-success">230</p>
+                    <p class="fs-6 fw-bolder text-muted">Volunteers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div id="footer"></div>
     <script>
@@ -185,13 +259,21 @@
         .then((data) => {
           document.getElementById("navbar").innerHTML = data;
         });
-    </script>
-      <script>
-        fetch("footer.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("footer").innerHTML = data;
+
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+
+      document.querySelectorAll(".donation ul li").forEach(function (item) {
+        item.addEventListener("click", function () {
+          document.querySelectorAll(".donation ul li").forEach(function (el) {
+            el.classList.remove("active");
           });
-      </script>
+          item.classList.add("active");
+        });
+      });
+    </script>
   </body>
 </html>
