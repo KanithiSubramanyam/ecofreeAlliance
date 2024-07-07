@@ -19,17 +19,38 @@
     color: rgb(255, 255, 255);
     content: " / "; 
   }
-  $breadcrumb-divider-color:var(--bs-primary-rgb);
+
+  .donationDiv {
+        background-image: url("../assets/bg6.jpg");
+        &.mx{
+            margin: 6rem 7rem !important;
+        }
+        &.py-5{
+            padding: 6rem 3rem !important;
+        }
+    
+  }
 .donation{
     ul{
         li{
             list-style: none;
-            border: 1px solid white;
+            border: 2px solid white;
             border-color: white;
             margin: 10px;
-            padding: 20px;
             border-radius: 5px;
+            padding: 10px 30px;
+        }
+        & :hover{
+            cursor: pointer;
+            border: 2px solid black;
+        }
+        & .active{
+            border: 2px solid black;
         }
       }
 }
-  
+
+
+.bg-grey {
+        background-color: #e3eadf !important;
+}
