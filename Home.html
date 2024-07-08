@@ -28,58 +28,60 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-  </head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      
+    <style>
+          .carousel-item {
+      display: none;
+      transition: transform 0.6s ease-in-out;
+    }
+    .carousel-item.active {
+      display: block;
+    }
+    </style>
+    </head>
 
   <body onscroll="myFunction()">
     <div class="m-0 p-0">
       <div id="navbar"></div>
 
-
-      <div class="m-0 p-0">
-          <div class="image-container position-relative">
-            <img
-              src="assets/close-up-picture-hand-holding-plant (1).jpg"
-              class="img-fluid w-100 h-100"
-              alt="Eco-friendly Image"
-            />
-            <div class="overlay position-absolute  d-flex flex-column text-center justify-content-center ">
-              
-              <h1 class="dark-bold text-white">
-                EcoFreeAlliance
-              </h1>
-              <blockquote class="blockquote mt-2">
-                <p class="fw-bolder fs-5 text-success" style="font-family: sans-serif">
-                  Join us in making a difference and creating a sustainable future for all.
-                </p>                
-                <footer class="blockquote-footer">Join Us <cite title="Ecofree Alliance">Ecofree Alliance</cite></footer>
-              </blockquote>
-            </div>
+      <div class="m-0 p-0 mb-5">
+        <div class="image-container position-relative">
+          <img
+            src="assets/close-up-picture-hand-holding-plant (1).jpg"
+            class="img-fluid w-100 h-100"
+            alt="Eco-friendly Image"
+          />
+          <div
+            class="overlay position-absolute d-flex flex-column text-center justify-content-center"
+          >
+            <h1 class="dark-bold text-white">EcoFreeAlliance</h1>
+            <blockquote class="blockquote mt-2">
+              <p
+                class="fw-bolder fs-5 text-success"
+                style="font-family: sans-serif"
+              >
+                Join us in making a difference and creating a sustainable future
+                for all.
+              </p>
+              <footer class="blockquote-footer">
+                Join Us <cite title="Ecofree Alliance">Ecofree Alliance</cite>
+              </footer>
+            </blockquote>
           </div>
         </div>
+      </div>
 
+      
 
-
-      <h1 class="text-center dark-bold pb-3">Together We Can Restore</h1>
       <div class="container mb-5">
-        <div
-          id="carouselExampleIndicators"
-          class="carousel slide"
-          data-ride="carousel"
-        >
-          <ol class="carousel-indicators">
-            <li
-              data-target="#carouselExampleIndicators"
-              data-slide-to="0"
-              class="active"
-            ></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-          </ol>
+        <h1 class="text-center dark-bold pb-3">Together We Can Restore</h1>
+        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+
           <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active " data-bs-interval="10000" data-bs-slide-to="2">
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-lg-4">
                   <div class="card">
                     <img
                       src="https://templates.hibotheme.com/clim/default/assets/img/project/project-1.jpg"
@@ -96,7 +98,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4">
                   <div class="card">
                     <img
                       src="https://templates.hibotheme.com/clim/default/assets/img/project/project-2.jpg"
@@ -113,7 +115,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4">
                   <div class="card">
                     <img
                       src="https://templates.hibotheme.com/clim/default/assets/img/project/project-3.jpg"
@@ -132,9 +134,9 @@
                 </div>
               </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="10000">
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-lg-4">
                   <div class="card">
                     <img
                       src="https://templates.hibotheme.com/clim/default/assets/img/project/project-4.jpg"
@@ -151,7 +153,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4">
                   <div class="card">
                     <img
                       src="https://templates.hibotheme.com/clim/default/assets/img/project/project-5.jpg"
@@ -168,7 +170,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4">
                   <div class="card">
                     <img
                       src="https://templates.hibotheme.com/clim/default/assets/img/project/project-6.jpg"
@@ -188,89 +190,58 @@
               </div>
             </div>
           </div>
-          <a
-            class="carousel-control-prev"
-            href="#carouselExampleIndicators"
-            role="button"
-            data-slide="prev"
-          >
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a
-            class="carousel-control-next"
-            href="#carouselExampleIndicators"
-            role="button"
-            data-slide="next"
-          >
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h4 class="text-center dark-bold pb-3">A little introduction</h4>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="card image-overlay mb-3">
-                <img
-                  src="https://static.vecteezy.com/system/resources/previews/002/543/675/large_2x/environment-earth-day-in-the-hands-of-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-on-nature-field-grass-forest-conservation-concept-photo.jpg"
-                  class="card-img-top img-fluid"
-                  alt="Eco-friendly Image"
-                />
-                <div
-                  class="overlay"
-                  style="background-color: rgb(173, 249, 164)"
-                >
-                  <h5 class="card-title pl-3 pt-2 dark-bold">
-                    Additional Information
-                  </h5>
-                  <p class="card-text pl-3 dark-bold">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Temporibus totam neque, soluta harum perferendis
-                    distinctio.Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit. Temporibus totam neque, soluta harum
-                    perferendis distinctio.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <!-- <h6 class="display-6 ">A little introduction</h6> -->
-              <div class="card">
-                <div
-                  class="card-body"
-                  style="background-color: rgb(173, 249, 164)"
-                >
-                  <h5 class="card-title dark-bold">Protecting environment</h5>
-                  <p class="card-text dark-bold">
-                    Lorem ipsum dolor sit amet consectetur, aisicing elit.
-                    aisicing.aisicing elit.sit amet consectetur, adipisicing
-                    elit quia harum? dolor sit amet consectetur, dolor sit amet
-                    consectetur, dolor sit amet consectetur, adipisicing elit.
-                    quia harum? Magnam incidunt consequunturLorem ipsum dolor
-                    sit amet consectetur, adipisicing elit. Nobis, quia harum?
-                    Magnam incidunt, consequuntur recusandae non voluptates
-                    impedit dolores provident dicta aliquam veniam in placeat
-                    culpa eligendi porro quam praesentium ipsa ipsum quod
-                    necessitatibus sit aliquid. Ullam veritatis necessitatibus
-                    fugiat, tempora amet recusandae, impedit quaerat iure
-                    consequatur voluptatem enim eaque.Lorem ipsum dolor sit amet
-                    consectetur, adipisicing elit. Nobis, quia harum? Magnam
-                    incidunt, consequuntur recusandae non voluptates impedit
-                    dolores provident dicta aliquam veniam in placeat culpa
-                    eligendi porro quam praesentium ipsa ipsum quod
-                    necessitatibus sit aliquid. Ullam veritatis necessitatibus
-                    fugiat, tempora amet recusandae, impedit quaerat iure
-                    consequatur voluptatem enim eaque.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+
+
+    
+<div class="m-0 p-0 bg-custom">
+
+  <div class="container-fluid my-5 py-5 ">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-5">
+          <img
+            src="assets/beautiful-shot-big-green-leafed-trees-grassy-field.jpg"
+            class="card-img-top img-fluid rounded-4 h-auto"
+            alt="Eco-friendly Image"
+          />
+          
+
+      </div>
+      <div class="col-lg-5 ">
+        <!-- <h6 class="display-6 ">A little introduction</h6> -->
+        <div class=" p-4">         
+          <p class="text-start fs-4 fw-semibold text-success pb-0">A little introduction</p>
+
+            <p class=" fs-2 fw-bold ">Protecting environment</p>
+            <p class="" style="text-align: justify;">
+              Lorem ipsum dolor sit amet consectetur, aisicing elit.
+              aisicing.aisicing elit.sit amet consectetur, adipisicing
+              elit quia harum? dolor sit amet consectetur, dolor sit amet
+              consectetur, dolor sit amet consectetur, adipisicing elit.
+              quia harum? Magnam incidunt consequunturLorem ipsum dolor
+              sit amet consectetur, adipisicing elit. Nobis, quia harum?
+              Magnam incidunt, consequuntur recusandae non voluptates
+              impedit dolores provident dicta aliquam veniam in placeat
+              culpa eligendi porro quam praesentium ipsa ipsum quod
+              necessitatibus sit aliquid.lorem
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dolore est vero modi voluptatem, in cum veniam asperiores expedita illo voluptatibus ad ipsum. Dolores voluptate repellat eligendi voluptatum maiores incidunt.
+            </p>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+
 
       <div id="footer"></div>
     </div>
@@ -294,6 +265,36 @@
           document.getElementById("navbar").classList.remove("fixed-top");
         }
       }
+
+
+      
+    </script>
+     <script>
+       $(document).ready(function() {
+      // Initialize carousel manually
+      $('#carouselExampleIndicators').carousel();
+
+      // Handle carousel slide event
+      $('#carouselExampleIndicators').on('slide.bs.carousel', function (e) {
+        var $e = $(e.relatedTarget);
+        var idx = $e.index();
+        var itemsPerSlide = 1; // Number of items to slide per event
+
+        var totalItems = $('.carousel-item').length;
+
+        if (idx >= totalItems - (itemsPerSlide - 1)) {
+          var it = itemsPerSlide - (totalItems - idx);
+          for (var i = 0; i < it; i++) {
+            // append slides to end
+            if (e.direction == "left") {
+              $('.carousel-item').eq(i).appendTo('.carousel-inner');
+            } else {
+              $('.carousel-item').eq(0).appendTo('.carousel-inner');
+            }
+          }
+        }
+      });
+    });
     </script>
   </body>
 </html>
