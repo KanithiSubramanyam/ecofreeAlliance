@@ -307,17 +307,17 @@
     </script>
     <script>
       $(document).ready(function () {
-        // Initialize the carousel
+        
         $("#teamCarousel").carousel();
 
-        // Hide extra cards on large screens
+        
         $("#teamCarousel").on("slid.bs.carousel", function () {
           var visibleItems = $(this).find(".carousel-item.active .card").length;
           var totalItems = $(this)
             .find(".carousel-item.active")
             .find(".card").length;
 
-          // Hide cards beyond the visible limit (4 cards for large screens)
+          
           if (visibleItems < totalItems) {
             $(this)
               .find(".carousel-item.active")
@@ -327,7 +327,7 @@
           }
         });
 
-        // Show hidden cards when navigating next
+       
         $(".carousel-control-next").click(function () {
           $("#teamCarousel")
             .find(".carousel-item.active")
