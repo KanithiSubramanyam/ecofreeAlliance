@@ -79,4 +79,41 @@
 }
 .donation ul .active {
   border: 2px solid black;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 91vh; /* Adjust the height as needed */
+  overflow: hidden;
+}
+.image-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (max-width: 768px) {
+  .image-container .image-container {
+    width: auto !important;
+    height: 50vh;
+  }
+}
+@media (min-width: 769px) {
+  .image-container .image-container {
+    width: auto !important;
+    height: 91vh;
+  }
+}
+.image-container .overlay {
+  top: 0;
+  padding-right: 40%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.image-container footer {
+  padding-left: 200px !important;
 }/*# sourceMappingURL=main.css.map */
